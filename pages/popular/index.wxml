@@ -1,0 +1,14 @@
+<!-- index.wxml
+<view class="container">
+  <view class="navigator">
+    <view class="date">
+      <text class="plain">No.<text class="index">01</text></text>
+      <div class="line"></div>
+      <text>七月<text>2020</text></text>
+    </view>
+    <view class="icon">
+      <image src="/images/icon/share.png"></image>
+      <image src="/images/icon/share.png"></image>
+    </view>
+  </view>
+</view> -->
