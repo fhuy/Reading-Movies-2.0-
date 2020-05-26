@@ -1,1 +1,71 @@
 /* pages/classic/classic.wxss */
+.full-date {
+  display: flex;
+  align-items: center;  
+  margin-left: 30rpx;
+}
+
+.index {
+  font-size: 30px;
+  font-weight: 800;
+  margin-right: 14rpx;
+}
+  
+.vertical-line {
+  margin-right: 14rpx;
+  height: 44rpx;
+  border-left: 1px solid black;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+v-like {
+  margin-right: 40rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.header image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.icon {
+  display: flex;
+  align-items: center;  
+  margin-right: 30rpx;
+}
+
+.play {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.play-btn {
+  width: 592rpx;
+  height: 82rpx;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.play-btn .left {
+  height: 80rpx;
+  width: 80rpx;  
+}
+
+.play-btn .right {
+  height: 80rpx;
+  width: 80rpx;  
+  /* float: right; */
+}

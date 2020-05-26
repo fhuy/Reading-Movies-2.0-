@@ -1,3 +1,24 @@
 <view>
-  <v-like />
+<view class="header">
+  <view class="full-date">
+    <view>
+      No.<text class="index">17</text>
+    </view>
+    <text class="vertical-line"></text>
+    <view class="date">
+      <text>三月</text><text>2018</text>  
+    </view>
+  </view>
+  <view class="icon">
+    <v-like />
+    <image class="share" src="/images/icon/share.png" />
+  </view>
+</view>
+<view class="play">
+  <view class="play-btn">
+    <image class="left" src="/components/navi/images/triangle@left.png" />
+    <text>罗启瑞-《岁月神偷》</text>
+    <image class="right" src="/components/navi/images/triangle@right.png" />
+  </view>
+</view>
 </view>
