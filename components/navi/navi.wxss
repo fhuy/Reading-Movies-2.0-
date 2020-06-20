@@ -1,0 +1,25 @@
+/* components/navi/navi.wxss */
+.play {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.play-btn {
+  width: 592rpx;
+  height: 82rpx;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.play-btn .left {
+  height: 80rpx;
+  width: 80rpx;  
+}
+
+.play-btn .right {
+  height: 80rpx;
+  width: 80rpx;  
+}

@@ -1,0 +1,24 @@
+/* components/epsoide/epsoide.wxss */
+.full-date {
+  display: flex;
+  align-items: center;  
+  margin-left: 30rpx;
+}
+
+.index {
+  font-size: 30px;
+  font-weight: 800;
+  margin-right: 14rpx;
+}
+  
+.vertical-line {
+  margin-right: 14rpx;
+  height: 44rpx;
+  border-left: 1px solid black;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}

@@ -1,0 +1,26 @@
+/* components/classic/music/music.wxss */
+.classic-img {
+  width: 750rpx;
+  height: 500rpx;
+}
+  
+
+.tag {
+  width: 46rpx;
+  height: 142rpx;
+  position: relative;
+  bottom: 68rpx;
+  left: 30rpx;  
+}
+
+.motto {
+  margin-bottom: 63px;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: block;
+  width: 550rpx;
+  height: 112rpx;
+}

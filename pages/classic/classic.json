@@ -1,5 +1,10 @@
 {
   "usingComponents": {
-    "v-like": "/components/like/index"
+    "v-like": "/components/like/index",    
+    "epsoide-cmp": "/components/epsoide/epsoide",
+    "navi-cmp": "/components/navi/navi",
+    "movie-cmp":"/components/classic/movie/movie",
+    "music-cmp": "/components/classic/music/music",
+    "essay-cmp": "/components/classic/essay/essay"
   }
 }

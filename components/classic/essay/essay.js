@@ -1,26 +1,21 @@
-// pages/classic/classic.js
-import { HTTP } from '../../utils/http'
-
-Page({
-
+// components/classic/essay/essay.js
+Component({
+  motto:{
+    type:String,
+    // value:'...',
+  },
   /**
    * 页面的初始数据
    */
   data: {
-    classic:null,
-    title: "罗启瑞-《岁月神偷》22"
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let params = {
-      url = '/classic/latest'
-    }
-    HTTP.request(params).then((data) => {
-      console.log('data', data)
-    })
+
   },
 
   /**

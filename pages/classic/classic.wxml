@@ -1,6 +1,6 @@
 <view>
 <view class="header">
-  <view class="full-date">
+  <!-- <view class="full-date">
     <view>
       No.<text class="index">17</text>
     </view>
@@ -8,17 +8,25 @@
     <view class="date">
       <text>三月</text><text>2018</text>  
     </view>
-  </view>
+  </view> -->
+  <epsoide-cmp />
   <view class="icon">
     <v-like />
     <image class="share" src="/images/icon/share.png" />
   </view>
 </view>
-<view class="play">
-  <view class="play-btn">
-    <image class="left" src="/components/navi/images/triangle@left.png" />
-    <text>罗启瑞-《岁月神偷》</text>
-    <image class="right" src="/components/navi/images/triangle@right.png" />
-  </view>
+<!-- <view >
+  <image class="classic-img" src="/images/tes/《饮食男女》@2x.png" />
+  <image class="tag" src="/images/tes/电影。@2x.png" />
+  <div class="motto">
+  <text class="content">人生不能像做菜，把所有的料准备好才下锅</text>
+</view> -->
+<view>
+  <image class="classic-img" src="/images/tes/《饮食男女》@2x.png" />
+    <image class="tag" src="/components/classic/music/images/music@tag.png" />
+  <div class="motto">
+    <text class="content">人生不能像做菜，把所有的料准备好才下锅</text>
+  </div>
 </view>
+<navi-cmp title="{{title}}"/>
 </view>
