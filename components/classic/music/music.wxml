@@ -1,6 +1,6 @@
 <!--components/classic/music/music.wxml-->
 <view>
-  <image class="classic-img" src="/images/tes/《饮食男女》@2x.png" />
+  <image class="classic-img" src="{{img}}" />
     <image class="tag" src="/components/classic/music/images/music@tag.png" />
   <div class="motto">
     <text class="content">{{motto}}</text>

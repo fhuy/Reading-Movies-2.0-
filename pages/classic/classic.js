@@ -1,6 +1,8 @@
 // pages/classic/classic.js
 import { HTTP } from '../../utils/http'
 
+let classic_HTTP = new HTTP();
+
 Page({
 
   /**
@@ -16,10 +18,16 @@ Page({
    */
   onLoad: function (options) {
     let params = {
-      url = '/classic/latest'
+      url : '/classic/latest'
     }
-    HTTP.request(params).then((data) => {
+    classic_HTTP.request(params).then((data) => {
       console.log('data', data)
+      console.log('data', data.data)
+      this.setData({
+        classic: data.data
+      })
+      // this.classic = data.data
+      // console.log('')
     })
   },
 
@@ -70,5 +78,33 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  // methods: {
+    onPrevious: function(event) {
+      // console.log('上一个')
+      let params = {
+       url : `/classic/${this.data.classic.index}/previous`
+      }
+      // console.log('url', url)
+      classic_HTTP.request(params).then((data) => {
+        console.log('data', data)
+        this.setData({
+          classic: data.data
+        })        
+      })
+    },
+    onNext: function() {
+      // const url = 
+      let params = {
+        url: `/classic/${this.data.classic.index}/next`
+      }
+      // console.log('url', url)
+      classic_HTTP.request(params).then((data) => {
+        console.log('data', data)
+        this.setData({
+          classic: data.data
+        })
+      })
+    }
+  // }
 })

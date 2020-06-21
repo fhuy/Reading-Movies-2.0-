@@ -1,7 +1,13 @@
 /* components/classic/music/music.wxss */
 .classic-img {
-  width: 750rpx;
-  height: 500rpx;
+  /* width: 750rpx;
+  height: 500rpx; */
+  width: 422rpx;
+  height: 422rpx;
+  /* margin-top: 60rpx; */
+  border-radius: 70%;
+  /* overflow: hidden; */
+  
 }
   
 

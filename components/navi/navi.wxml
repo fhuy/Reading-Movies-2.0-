@@ -1,8 +1,8 @@
 <!--components/navi/navi.wxml-->
 <view class="play">
   <view class="play-btn">
-    <image class="left" src="/components/navi/images/triangle@left.png" bindtap="onPrevious"/>
+    <image class="left" src="/components/navi/images/triangle@left.png" bind:tap="onLeft"/>
     <text>{{title}}</text>
-    <image class="right" src="/components/navi/images/triangle@right.png" bindtap="onNext"/>
+    <image class="right" src="/components/navi/images/triangle@right.png" bind:tap="onRight"/>
   </view>
 </view>

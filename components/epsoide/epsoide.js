@@ -1,5 +1,18 @@
 // components/epsoide/epsoide.js
-Page({
+Component({
+  properties: {
+    index:{
+      type: Number,
+      // value:'...',
+    },
+    date: {
+      type: String 
+    },
+    date: {
+      type: Number 
+    }
+  },
+
 
   /**
    * 页面的初始数据

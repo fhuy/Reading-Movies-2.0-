@@ -1,10 +1,13 @@
 // components/classic/music/music.js
 Component({
   properties: {
-    motto:{
+    img: {
+      type:String,
+    },
+    motto: {
       type:String,
       // value:'...',
-    }
+    }    
   },
 
   /**

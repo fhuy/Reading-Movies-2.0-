@@ -1,10 +1,10 @@
 <!--components/epsoide/epsoide.wxml-->
   <view class="full-date">
     <view>
-      No.<text class="index">17</text>
+      No.<text class="index">{{index}}</text>
     </view>
     <text class="vertical-line"></text>
     <view class="date">
-      <text>三月</text><text>2018</text>  
+      <text>{{month}}</text><text>{{year}}</text>  
     </view>
   </view>

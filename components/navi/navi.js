@@ -1,4 +1,7 @@
 // components/navi/navi.js
+// import { HTTP } from '../../utils/http'
+
+// let HTTP = new HTTP()
 Component({
 
   properties: {
@@ -68,5 +71,26 @@ Component({
    */
   onShareAppMessage: function () {
 
+  },
+
+  methods: {
+    onLeft() {
+      this.triggerEvent('left', {}, {})
+    },
+    onRight() {
+      this.triggerEvent('right', {}, {})
+    },
+    periodical(index, type) {
+      HTTP.request(params).then((data) => {
+        console.log('data', data)
+        console.log('data', data.data)
+        this.setData({
+          classic: data.data
+        })
+      })
+    }
+    // onNext() {
+
+    // }
   }
 })

@@ -1,4 +1,4 @@
-import config from '../config'
+import { config } from '../config.js'
 
 class HTTP {
   constructor() {
@@ -7,7 +7,7 @@ class HTTP {
   request(params) {
     return new Promise((resolve, reject) => {
       wx.request({
-        url: params.url+`?appkey=${config.appkey}`,
+        url: this.baseRestUrl+params.url+`?appkey=${config.appkey}`,
         success: (res) => resolve(res),
         fail: (res) => reject(res)
       })

@@ -1,9 +1,15 @@
 // components/classic/movie/movie.js
 Component({
-  motto:{
-    type:String,
-    // value:'...',
+  properties: {
+    img: {
+      type:String,
+    },
+    motto: {
+      type:String,
+      // value:'...',
+    }    
   },
+
   /**
    * 页面的初始数据
    */
