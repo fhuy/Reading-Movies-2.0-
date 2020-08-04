@@ -1,7 +1,7 @@
 <!--components/epsoide/epsoide.wxml-->
   <view class="full-date">
     <view>
-      No.<text class="index">{{index}}</text>
+      No.<text class="index">{{'0' + index}}</text>
     </view>
     <text class="vertical-line"></text>
     <view class="date">

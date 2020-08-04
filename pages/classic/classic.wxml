@@ -1,15 +1,6 @@
 <view>
 <view class="header">
-  <!-- <view class="full-date">
-    <view>
-      No.<text class="index">17</text>
-    </view>
-    <text class="vertical-line"></text>
-    <view class="date">
-      <text>三月</text><text>2018</text>  
-    </view>
-  </view> -->
-  <epsoide-cmp index="{{classic.index}}"/>
+  <epsoide-cmp index="{{classic.index}}" />
   <view class="icon">
     <v-like count="{{classic.fav_nums}}" />
     <image class="share" src="/images/icon/share.png" />
@@ -18,18 +9,5 @@
 <movie-cmp wx:if="{{classic.type==100}}" img="{{classic.image}}" motto="{{classic.content}}" />
 <music-cmp wx:if="{{classic.type==200}}" img="{{classic.image}}" motto="{{classic.content}}" />
 <essay-cmp wx:if="{{classic.type==300}}" img="{{classic.image}}" motto="{{classic.content}}" />
-<!-- <view >
-  <image class="classic-img" src="/images/tes/《饮食男女》@2x.png" />
-  <image class="tag" src="/images/tes/电影。@2x.png" />
-  <div class="motto">
-  <text class="content">人生不能像做菜，把所有的料准备好才下锅</text>
-</view>
-<view>
-  <image class="classic-img" src="/images/tes/《饮食男女》@2x.png" />
-    <image class="tag" src="/components/classic/music/images/music@tag.png" />
-  <div class="motto">
-    <text class="content">人生不能像做菜，把所有的料准备好才下锅</text>
-  </div>
-</view> -->
 <navi-cmp title="{{classic.title}}"  bind:left="onPrevious" bind:right="onNext" />
 </view>

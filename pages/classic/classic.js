@@ -18,7 +18,7 @@ Page({
    */
   onLoad: function (options) {
     let params = {
-      url : '/classic/latest'
+      url : 'classic/latest'     
     }
     classic_HTTP.request(params).then((data) => {
       console.log('data', data)
@@ -94,9 +94,9 @@ Page({
       })
     },
     onNext: function() {
-      // const url = 
+      console.log('下一个')
       let params = {
-        url: `/classic/${this.data.classic.index}/next`
+        url: `classic/${this.data.classic.index}/next`
       }
       // console.log('url', url)
       classic_HTTP.request(params).then((data) => {

@@ -13,7 +13,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "林间有风",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "red",
+    "backgroundColor": "#DC143C",
     "enablePullDownRefresh": true
   },
   "style": "v2",

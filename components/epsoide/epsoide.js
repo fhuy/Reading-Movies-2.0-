@@ -7,73 +7,41 @@ Component({
     },
     date: {
       type: String 
-    },
-    date: {
-      type: Number 
     }
   },
-
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    months:[
+      '一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月',
+      '十二月'
+    ],
+    year:Number,
+    month:String,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  lifetimes: {
+    // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+    attached: function () { 
+      let monIndex = new Date().getMonth()
+      this.setData({
+        month: this.data.months[monIndex],
+        year: new Date().getFullYear()
+      })
 
+    },
+    moved: function () { },
+    detached: function () { },
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  pageLifetimes: {
+    // 组件所在页面的生命周期函数
+    show: function () { 
+      console.log('月份', this.data.month)
+    },
+    hide: function () { },
+    resize: function () { },
   }
 })
