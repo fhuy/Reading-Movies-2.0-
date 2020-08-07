@@ -83,7 +83,7 @@ Page({
     onPrevious: function(event) {
       // console.log('上一个')
       let params = {
-       url : `/classic/${this.data.classic.index}/previous`
+       url : `/classic/${this.data.classic.index}/next`
       }
       // console.log('url', url)
       classic_HTTP.request(params).then((data) => {
@@ -94,9 +94,20 @@ Page({
       })
     },
     onNext: function() {
-      console.log('下一个')
       let params = {
-        url: `classic/${this.data.classic.index}/next`
+        url: `classic/${this.data.classic.index}/previous`
+      }
+      // console.log('url', url)
+      classic_HTTP.request(params).then((data) => {
+        console.log('data', data)
+        this.setData({
+          classic: data.data
+        })
+      })
+    },
+    onPrevious: function() {
+      let params = {
+        url: `classic/${this.data.classic.index}/previous`
       }
       // console.log('url', url)
       classic_HTTP.request(params).then((data) => {
@@ -106,5 +117,4 @@ Page({
         })
       })
     }
-  // }
 })

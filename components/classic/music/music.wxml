@@ -1,8 +1,8 @@
 <!--components/classic/music/music.wxml-->
-<view>
-  <image class="classic-img" src="{{img}}" />
-    <image class="tag" src="/components/classic/music/images/music@tag.png" />
-  <div class="motto">
-    <text class="content">{{motto}}</text>
-  </div>
+<view class="mus-container">
+  <image class="music-img" src="{{img}}" />
+  <image class="tag" src="/components/classic/music/images/music@tag.png" />
+  <!-- <div class="motto"> -->
+  <text class="content">{{motto}}</text>
+  <!-- </div> -->
 </view>
