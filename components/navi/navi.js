@@ -1,76 +1,44 @@
 // components/navi/navi.js
-// import { HTTP } from '../../utils/http'
-
-// let HTTP = new HTTP()
 Component({
-
   properties: {
-    title:{
-      type:String,
-      // value:'...',
+    title: {
+      type: String,
+    },
+    index: {
+      type: Number
     }
   },
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    left: '/components/navi/images/triangle@left.png',
+    disleft: '/components/navi/images/triangle.dis@left.png',
+    right: '/components/navi/images/triangle@right.png',
+    disright: '/components/navi/images/triangle.dis@right.png',
+    unleft: false,
+    unright: false 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  observers: {
+    'index'() {
+      // console.log('监听', this.data.index)
+      console.log('监听')
+      console.log(this.data.index)
+      // if(this.data.index === 1) {
+      //   this.data.unright = true
+      // }else if(this.data.index === 8) {
+      //   this.data.unleft = true
+      // }
+    } 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  pageLifetimes: {
+    show: function() {
+      // 页面被展示
+      console.log('indexindex', this.data.index)
+    },
+    hide: function() {
+      // 页面被隐藏
+    },
+    resize: function(size) {
+      // 页面尺寸变化
+    }
   },
 
   methods: {
@@ -82,8 +50,6 @@ Component({
     },
     periodical(index, type) {
       HTTP.request(params).then((data) => {
-        console.log('data', data)
-        console.log('data', data.data)
         this.setData({
           classic: data.data
         })

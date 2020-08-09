@@ -1,64 +1,54 @@
-/* components/classic/music/music.wxss
-/* .classic-img {
-  width: 422rpx;
-  height: 422rpx;
-  border-radius: 70%;
-} */
+/* components/classic/music/music.wxss */
 
 .mus-container {
   display: flex;
   flex-direction: column;
   align-items: center;  
+  margin-bottom: 60px;
   /* width: 422rpx;  a tip */
 }
 
 .music-img {
   width: 422rpx;
   height: 422rpx;
-  /* position: absolute; */
-  /* top: 50%;
-  margin-left: 164rpx; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
+  margin: 30px 0 24px;
+  border-radius: 60%;
 }
   
 
-.tag {
-  width: 46rpx;
-  height: 142rpx;
-  /* position: relative;
-  bottom: 68rpx;
-  left: -550rpx;   */
+.tag{
+  width:44rpx;
+  height:127rpx;
+  position: relative;
+  bottom: 20rpx;
+  left: -330rpx;  
 }
 
 .content {
   max-width:550rpx;
   font-size:36rpx;
 }
-/*
-.content {
-  display: block;
-  width: 550rpx;
-  height: 112rpx;
-}
-*/
 
-.tag {
-  width: 46rpx;
-  height: 142rpx;
+.mustatus {
+  width: 120rpx;
+  height: 120rpx;
   position: relative;
-  bottom: 68rpx;
-  left: 30rpx;  
-}
-/*
-.motto {
-  margin-bottom: 63px;
-  display: flex;
-  justify-content: center;
+  bottom: 430rpx;  
 }
 
-.content {
-  display: block;
-  width: 550rpx;
-  height: 112rpx;
-} */
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.rotation {
+  -webkit-transform: rotate(360deg);
+  animation: rotation 12s linear infinite;
+  -moz-animation: rotation 12s linear infinite;
+  -webkit-transform: rotation 12s linear infinite;
+  -o-animation: rotation 12s linear infinite;
+}

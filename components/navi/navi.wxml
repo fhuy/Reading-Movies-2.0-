@@ -1,8 +1,10 @@
 <!--components/navi/navi.wxml-->
 <view class="play">
   <view class="play-btn">
-    <image class="left" src="/components/navi/images/triangle@left.png" bind:tap="onLeft"/>
+    <!-- <image class="left" src="/components/navi/images/triangle@left.png" bind:tap="onLeft"/> -->
+    <!-- <image class="left" src="{{index === 8？'/components/navi/images/triangle.dis@left.png' : '/components/navi/images/triangle@left.png'" bind:tap="onLeft"/> -->
+    <image class="left" disable="{{unleft}}" src="{{index === 8? disleft : left}}" bind:tap="onLeft"/>
     <text>{{title}}</text>
-    <image class="right" src="/components/navi/images/triangle@right.png" bind:tap="onRight"/>
+    <image class="right" disable="{{unright}}" src="{{index === 1? disright : right}}" bind:tap="onRight"/>
   </view>
 </view>

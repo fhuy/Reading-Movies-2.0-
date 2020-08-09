@@ -31,6 +31,9 @@ v-like {
   display: flex;
   justify-content: space-between;
   align-items: center;  
+  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid #f7f7f7;
+  /* margin-bottom: ; */
 }
 
 .header image {
@@ -80,7 +83,7 @@ v-like {
   height: 142rpx;
   position: relative;
   bottom: 68rpx;
-  left: 30rpx;  
+  left: -250rpx;  
 }
 
 .motto {

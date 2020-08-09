@@ -1,30 +1,13 @@
-// components/classic/music/music.js
-Component({
-  properties: {
-    img: {
-      type:String
-    },
-    motto: {
-      type:String
-    }    
-  },
+// pages/book/book.js
+Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    status: false,
-    playingUrl: "images/player@playing.png",
-    pauseUrl: "images/player@waitting.png"
+
   },
 
-  methods: {
-    onPlay: function() {
-      this.setData({
-        status: !this.data.status
-      })
-    }
-  },
   /**
    * 生命周期函数--监听页面加载
    */

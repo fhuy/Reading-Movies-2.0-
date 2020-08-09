@@ -9,5 +9,5 @@
 <movie-cmp wx:if="{{classic.type==100}}" img="{{classic.image}}" motto="{{classic.content}}" />
 <music-cmp wx:if="{{classic.type==200}}" img="{{classic.image}}" motto="{{classic.content}}" />
 <essay-cmp wx:if="{{classic.type==300}}" img="{{classic.image}}" motto="{{classic.content}}" />
-<navi-cmp title="{{classic.title}}"  bind:left="onPrevious" bind:right="onNext" />
+<navi-cmp title="{{classic.title}}" index="{{classic.index}}" bind:left="onPrevious" bind:right="onNext" />
 </view>

@@ -39,7 +39,6 @@ Component({
   pageLifetimes: {
     // 组件所在页面的生命周期函数
     show: function () { 
-      console.log('月份', this.data.month)
     },
     hide: function () { },
     resize: function () { },

@@ -10,7 +10,7 @@ Page({
    */
   data: {
     classic:null,
-    title: "罗启瑞-《岁月神偷》22"
+    title: "罗启瑞-《岁月神偷》"
   },
 
   /**
@@ -21,13 +21,9 @@ Page({
       url : 'classic/latest'     
     }
     classic_HTTP.request(params).then((data) => {
-      console.log('data', data)
-      console.log('data', data.data)
       this.setData({
         classic: data.data
       })
-      // this.classic = data.data
-      // console.log('')
     })
   },
 
@@ -79,42 +75,30 @@ Page({
   onShareAppMessage: function () {
 
   },
-  // methods: {
-    onPrevious: function(event) {
-      // console.log('上一个')
-      let params = {
-       url : `/classic/${this.data.classic.index}/next`
-      }
-      // console.log('url', url)
-      classic_HTTP.request(params).then((data) => {
-        console.log('data', data)
-        this.setData({
-          classic: data.data
-        })        
-      })
-    },
-    onNext: function() {
-      let params = {
-        url: `classic/${this.data.classic.index}/previous`
-      }
-      // console.log('url', url)
-      classic_HTTP.request(params).then((data) => {
-        console.log('data', data)
-        this.setData({
-          classic: data.data
-        })
-      })
-    },
-    onPrevious: function() {
-      let params = {
-        url: `classic/${this.data.classic.index}/previous`
-      }
-      // console.log('url', url)
-      classic_HTTP.request(params).then((data) => {
-        console.log('data', data)
-        this.setData({
-          classic: data.data
-        })
-      })
+  onNext: function() {
+    if(this.data.classic.index === 1)
+      return
+    let params = {
+      url: `classic/${this.data.classic.index}/previous`
     }
+    console.log('之后url', params)
+    classic_HTTP.request(params).then((data) => {
+      this.setData({
+        classic: data.data
+      })
+    })
+  },
+  onPrevious: function() {
+    if(this.data.classic.index === 8)
+      return
+    let params = {
+      url: `classic/${this.data.classic.index}/next`
+    }
+    console.log('先前url', params)
+    classic_HTTP.request(params).then((data) => {
+      this.setData({
+        classic: data.data
+      })
+    })
+  }
 })

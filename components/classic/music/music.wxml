@@ -1,8 +1,7 @@
 <!--components/classic/music/music.wxml-->
 <view class="mus-container">
-  <image class="music-img" src="{{img}}" />
+  <image class="music-img {{status?'rotation':''}}" src="{{img}}" />
   <image class="tag" src="/components/classic/music/images/music@tag.png" />
-  <!-- <div class="motto"> -->
+  <image class="mustatus" src="{{status? playingUrl : pauseUrl}}" bindtap="onPlay" />
   <text class="content">{{motto}}</text>
-  <!-- </div> -->
 </view>
