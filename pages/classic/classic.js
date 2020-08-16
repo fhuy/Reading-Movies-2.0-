@@ -1,7 +1,9 @@
 // pages/classic/classic.js
-import { HTTP } from '../../utils/http'
+import { ClassicModel } from '../../models/classic'
+import { LikeModel } from '../../models/like'
 
-let classic_HTTP = new HTTP();
+let classicModel = new ClassicModel();
+let likeModel = new LikeModel();
 
 Page({
 
@@ -17,14 +19,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let params = {
-      url : 'classic/latest'     
-    }
-    classic_HTTP.request(params).then((data) => {
+    // let params = {
+    //   url : 'classic/latest'     
+    // }
+    // classic_HTTP.request(params).then((data) => {
+    //   this.setData({
+    //     classic: data.data
+    //   })
+    // })
+    classicModel.getLastest((res) => {
+      console.log('我是被传来的值', res)
       this.setData({
-        classic: data.data
+        classic: res
       })
-    })
+    }) 
+  },
+
+  onLike: function (event) {
+    console.log('事件', event)
+    let like_or_cancel = event.detail.behavior;
+    likeModel.like(like_or_cancel, this.data.classic.id, this.data.classic.type)
   },
 
   /**

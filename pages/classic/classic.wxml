@@ -2,7 +2,7 @@
 <view class="header">
   <epsoide-cmp index="{{classic.index}}" />
   <view class="icon">
-    <v-like count="{{classic.fav_nums}}" />
+    <v-like count="{{classic.fav_nums}}" bind:like="onLike"/>
     <image class="share" src="/images/icon/share.png" />
   </view>
 </view>
