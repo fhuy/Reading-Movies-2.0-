@@ -1,25 +1,19 @@
-/* components/navi/navi.wxss */
-.play {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.play-btn {
-  width: 592rpx;
-  height: 82rpx;
+.container{
+  width:600rpx;
+  height:80rpx;
   background-color: #f7f7f7;
-  display: flex;
+  border-radius:2px;
+  display:inline-flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 
-.play-btn .left {
-  height: 80rpx;
-  width: 80rpx;  
+.navi-icon{
+  height:80rpx;
+  width:80rpx;
 }
 
-.play-btn .right {
-  height: 80rpx;
-  width: 80rpx;  
+.title{
+  font-size:28rpx;
 }

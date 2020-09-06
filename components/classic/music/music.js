@@ -1,12 +1,12 @@
-// components/classic/music/music.js
+import { classBehavior } from '../classic-beh'
+
+let mMgr = wx.getBackgroundAudioManager()
+
 Component({
+  behaviors: [classBehavior],
   properties: {
-    img: {
-      type:String
-    },
-    motto: {
-      type:String
-    }    
+    src: String,
+    title: String
   },
 
   /**
@@ -14,17 +14,62 @@ Component({
    */
   data: {
     status: false,
-    playingUrl: "images/player@playing.png",
-    pauseUrl: "images/player@waitting.png"
+    playingUrl: 'images/player@playing.png',
+    pauseUrl: 'images/player@waitting.png'
   },
 
   methods: {
-    onPlay: function() {
-      this.setData({
-        status: !this.data.status
+    onPlay: function (event) {
+      if(!this.data.playing) {
+        this.setData({
+          playing: true
+        })
+        if(mMgr.src === this.properties.src) {
+          mMgr.play()
+        }
+        else {
+          mMgr.src = this.properties.title 
+        }
+      } else {
+        this.setData({
+          playing: false
+        })
+        mMgr.pause()
+      }
+    },
+
+    _recoverPlaying: function() {
+      if(mMgr.paused) {
+        thia.setData({
+          playing: false
+        })
+        return
+      }
+      if(mMgr.src === this.properties.src) {
+        if(!mMgr.pause) {
+          this.setData({
+            playing: true
+          })
+        }
+      }
+    },
+
+    _monitorSwitch: function() {
+      mMgr.onPlay(() => {
+        this._recoverPlaying()
+      })
+      mMgr.onPause(() => {
+        this._recoverPlaying()
+      })
+      mMgr.onStop(() => {
+        this._recoverPlaying()
+      })
+      mMgr.onEnded(() => {
+        this._recoverPlaying()
       })
     }
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -80,4 +125,4 @@ Component({
   onShareAppMessage: function () {
 
   }
-})
+});

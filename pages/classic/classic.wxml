@@ -1,13 +1,13 @@
-<view>
-<view class="header">
-  <epsoide-cmp index="{{classic.index}}" />
-  <view class="icon">
-    <v-like count="{{classic.fav_nums}}" bind:like="onLike"/>
-    <image class="share" src="/images/icon/share.png" />
+<view class="container">
+  <view class="header">
+    <epsoide-cmp index="{{classic.index}}" />
+    <view class="icon">
+      <v-like count="{{classic.fav_nums}}" bind:like="onLike"/>
+      <image class="share" src="/images/icon/share.png" />
+    </view>
   </view>
-</view>
-<movie-cmp wx:if="{{classic.type==100}}" img="{{classic.image}}" motto="{{classic.content}}" />
-<music-cmp wx:if="{{classic.type==200}}" img="{{classic.image}}" motto="{{classic.content}}" />
-<essay-cmp wx:if="{{classic.type==300}}" img="{{classic.image}}" motto="{{classic.content}}" />
-<navi-cmp title="{{classic.title}}" index="{{classic.index}}" bind:left="onPrevious" bind:right="onNext" />
+  <movie-cmp wx:if="{{classic.type==100}}" img="{{classic.image}}" motto="{{classic.content}}" />
+  <music-cmp wx:if="{{classic.type==200}}" img="{{classic.image}}" motto="{{classic.content}}" />
+  <essay-cmp wx:if="{{classic.type==300}}" img="{{classic.image}}" motto="{{classic.content}}" />
+  <navi-cmp title="{{classic.title}}" index="{{classic.index}}" bind:left="onPrevious" bind:right="onNext" />
 </view>

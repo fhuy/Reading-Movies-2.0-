@@ -1,46 +1,50 @@
-// components/epsoide/epsoide.js
+// components/epsoide/epsoide-cmp.js
 Component({
+  /**
+   * 组件的属性列表
+   */
   properties: {
     index:{
       type: Number,
-      // value:'...',
-    },
-    date: {
-      type: String 
+      observer:function(newVal, oldVal, changedPath){
+        if (newVal < 10) {
+          this.setData({
+            _index: '0' + newVal
+          })
+        }
+      }
     }
   },
 
   /**
-   * 页面的初始数据
+   * 组件的初始数据, data 的值也会被页面绑定, 但data的值不可以从组件外部设置
+   * 使用text组件会出现双文字的情况
    */
   data: {
-    months:[
-      '一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月',
-      '十二月'
-    ],
-    year:Number,
-    month:String,
+      months:[
+        '一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月',
+        '十二月'
+      ],
+      year:Number,
+      month:String,
+      _index:String
   },
 
-  lifetimes: {
-    // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
-    attached: function () { 
-      let monIndex = new Date().getMonth()
-      this.setData({
-        month: this.data.months[monIndex],
-        year: new Date().getFullYear()
-      })
-
-    },
-    moved: function () { },
-    detached: function () { },
+  ready:function(){
+    let date = new Date()
+    let month = date.getMonth()
+    let year = date.getFullYear()
+    this.setData({
+      month:this.data.months[month],
+      year:year
+    })
+    console.log('属性', this.properties)
+    console.log('数据', this.data)
   },
 
-  pageLifetimes: {
-    // 组件所在页面的生命周期函数
-    show: function () { 
-    },
-    hide: function () { },
-    resize: function () { },
+  /**
+   * 组件的方法列表
+   */
+  methods: {
   }
 })

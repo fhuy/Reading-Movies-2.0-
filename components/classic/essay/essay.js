@@ -1,14 +1,8 @@
-// components/classic/essay/essay.js
+import { classBehavior } from '../classic-beh'
+
 Component({
-  properties: {
-    img: {
-      type:String,
-    },
-    motto: {
-      type:String,
-      // value:'...',
-    }    
-  },
+  behaviors: [classBehavior],
+
   /**
    * 页面的初始数据
    */
@@ -71,4 +65,4 @@ Component({
   onShareAppMessage: function () {
 
   }
-})
+});

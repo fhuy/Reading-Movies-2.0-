@@ -1,8 +1,5 @@
-<!--components/classic/movie/movie.wxml-->
-<view>
-  <image class="classic-img" src="{{img}}" />
-    <image class="tag" src="/components/classic/movie/images/movie@tag.png" />
-  <div class="motto">
-    <text class="content">{{motto}}</text>
-  </div>
+<view class="classic-container">
+  <image src="{{img}}" class="classic-img"></image>
+  <image class='tag' src="images/movie@tag.png" />
+  <text class="content">{{motto}}</text>
 </view>

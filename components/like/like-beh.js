@@ -1,24 +1,21 @@
-// components/like/like-cmp.js
-Component({
-  /**
-   * 组件的属性列表
-   */
+import {
+  HTTP
+} from '../../utils/http.js'
+
+let likeBehavior = Behavior({
   properties: {
-    like: Boolean,
-    count: Number,
-    readOnly:Boolean
+    like:Boolean,
+    count:Number
   },
-
   data: {
-    yes_url: 'images/like.png',
-    no_url: 'images/like@dis.png'
+    yes_url: '../images/like.png',
+    no_url: '../images/like@dis.png'
   },
-
+  attached: function() {
+  },
   methods: {
-    onLike: function (event) {
-      if(this.properties.readOnly){
-        return
-      }
+
+    onLike: function(event) {
       let count = this.properties.count
       count = this.properties.like ? count - 1 : count + 1
       this.setData({
@@ -29,6 +26,12 @@ Component({
       this.triggerEvent('like', {
         behavior: behavior
       }, {})
-    }
+    },
+
+    
   }
 })
+
+export {
+  likeBehavior
+}
